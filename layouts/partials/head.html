@@ -11,7 +11,7 @@
 
   <!-- Custom CSS from assets -->
   {{ $customCSS := resources.Get "css/custom.css" | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $customCSS.Permalink }}">
+  <link rel="stylesheet" href="/css/custom.css">
 
   {{ partial "head_custom.html" . }}
 </head>
