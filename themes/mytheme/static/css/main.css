@@ -1,159 +1,140 @@
-/* ===============================
-   Dark/Night Mode Main Stylesheet
-   Path: static/css/main.css
-   =============================== */
+/* ==============================
+   Main Dark/Nighttime Theme CSS
+   Path: themes/mytheme/static/css/main.css
+   ============================== */
 
-/* Reset / Normalize */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-  line-height: 1.5;
-  scroll-behavior: smooth;
-}
-
+/* Reset and body */
 body {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  color: #e0e0e0;             /* light gray text */
-  background-color: #0b0b0d;  /* very dark background */
-  margin: 0;
-  padding: 0;
-}
-
-/* Links */
-a {
-  color: #4da6ff;  /* bright blue accent */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover,
-a:focus {
-  color: #82c4ff;
-  text-decoration: underline;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0;            /* Light gray text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.25;
-  margin: 1rem 0 0.5rem;
-  color: #ffffff;  /* pure white for contrast */
+    color: #ffffff; /* White headings */
+    margin-bottom: 1rem;
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.125rem; }
-h6 { font-size: 1rem; }
-
-/* Paragraphs */
-p {
-  margin: 0.75rem 0;
-  color: #cccccc;  /* softer gray for readability */
+/* Links */
+a {
+    color: #1e90ff; /* Bright blue links */
+    text-decoration: none;
 }
 
-/* Lists */
-ul, ol {
-  margin: 1rem 0 1rem 2rem;
+a:hover {
+    color: #63b3ed; /* Lighter blue on hover */
+    text-decoration: underline;
 }
 
-li {
-  margin: 0.5rem 0;
-}
-
-/* Buttons */
-button,
-input[type="submit"] {
-  display: inline-block;
-  background: #4da6ff;
-  color: #0b0b0d;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  background: #82c4ff;
-}
-
-/* Forms */
-input, textarea, select {
-  width: 100%;
-  padding: 0.5rem;
-  margin: 0.5rem 0;
-  border: 1px solid #333;
-  border-radius: 0.25rem;
-  background: #1a1a1d;
-  color: #e0e0e0;
-}
-
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: #4da6ff;
-  box-shadow: 0 0 0 2px rgba(77, 166, 255, 0.3);
-}
-
-/* Header */
+/* Navigation/header */
 header {
-  background: #111114;
-  padding: 1rem;
-  border-bottom: 1px solid #222;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.75rem;
-}
-
-/* Navigation */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  font-weight: 500;
-  color: #e0e0e0;
-}
-
-nav a:hover {
-  color: #4da6ff;
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #333;
 }
 
 /* Footer */
 footer {
-  background: #111114;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  color: #999;
-  border-top: 1px solid #222;
+    background-color: #1f1f1f;
+    color: #aaaaaa;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-top: 1px solid #333;
 }
 
-/* Containers / Layout */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Main content area */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Utility Classes */
-.text-center { text-align: center; }
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 1rem; }
-.mt-4 { margin-top: 2rem; }
+/* Buttons */
+button, .button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover, .button:hover {
+    background-color: #63b3ed;
+}
+
+/* Code blocks */
+pre, code {
+    background-color: #1e1e1e;
+    color: #f8f8f2;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table th, table td {
+    border: 1px solid #333;
+    padding: 0.5rem 1rem;
+}
+
+table th {
+    background-color: #1f1f1f;
+}
+
+table tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 2rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #1e90ff;
+    padding-left: 1rem;
+    color: #cccccc;
+    margin: 1rem 0;
+}
+
+/* Horizontal rule */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin: 2rem 0;
+}
+
+/* Form elements */
+input, textarea, select {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
