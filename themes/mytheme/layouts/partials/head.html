@@ -12,11 +12,9 @@
   {{- /* Favicon (optional) */ -}}
   <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 
-  {{- /* Main Hugo generated CSS (if your theme uses one) */ -}}
-  {{ $mainCSS := resources.Get "css/main.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}" integrity="{{ $mainCSS.Data.Integrity }}">
+  {{- /* Theme’s default stylesheet if you have one */ -}}
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 
-  {{- /* Custom CSS (yours, overrides everything else) */ -}}
-  {{ $customCSS := resources.Get "css/custom.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}">
-  </head>
+  {{- /* Your custom stylesheet (always last to override) */ -}}
+  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+</head>
