@@ -14,11 +14,11 @@
   <!-- Favicon -->
   <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 
-  <!-- Hugo-generated styles (if any) -->
-  {{ $styles := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  <!-- Theme’s default CSS (keeps basic layout) -->
+  {{ $themeCSS := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $themeCSS.RelPermalink }}" integrity="{{ $themeCSS.Data.Integrity }}">
 
-  <!-- Custom per-page styles -->
-  {{ block "styles" . }}{{ end }}
+  <!-- ✅ Your custom dark theme CSS -->
+  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 </head>
 <body class="dark-mode">
