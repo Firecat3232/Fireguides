@@ -1,0 +1,4 @@
+baseURL = "fireguides.netlify.app"
+title = "FireGuides"
+theme = ""
+languageCode = "en-us"
