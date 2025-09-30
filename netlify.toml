@@ -1,5 +1,6 @@
 [build]
-  base = "/opt/build/repo"
-  command = "hugo --minify --verbose"
   publish = "public"
-  environment = { HUGO_VERSION = "0.150.1" }
+  command = "hugo --minify --verbose"
+
+[build.environment]
+  HUGO_VERSION = "0.150.1"
