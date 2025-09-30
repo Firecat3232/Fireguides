@@ -1,4 +1,26 @@
-baseURL = "fireguides.netlify.app"
-title = "FireGuides"
-theme = "ananke"
+baseURL = "https://fireguides.netlify.app/"
+title = "Fireguides"
+theme = "your-theme"   # keep whatever you’re using
 languageCode = "en-us"
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "Guides"
+  url = "/guides/"
+  weight = 2
+
+  [[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 3
+
+  [[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 4
