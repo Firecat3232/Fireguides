@@ -1,6 +1,5 @@
 [build]
-  publish = public
-  command = hugo
-
+  publish = "public"
+  command = "hugo --minify --verbose"
 [context.production.environment]
   
