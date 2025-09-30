@@ -1,1 +1,29 @@
-<!-- single.html template will render individual tutorials -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }} | FireGuides</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">🔥 FireGuides</a></h1>
+    <nav>
+      <a href="/tutorials/">All Tutorials</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>{{ .Title }}</h2>
+      <p><em>Date: {{ .Date.Format "2006-01-02" }}</em></p>
+      {{ .Content }}
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 FireGuides. Automated AI-generated tutorials.</p>
+  </footer>
+</body>
+</html>
