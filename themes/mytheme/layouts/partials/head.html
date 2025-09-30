@@ -1,4 +1,22 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ .Site.Title }}</title>
-<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+  {{- /* Basic SEO */ -}}
+  <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
+  <meta name="author" content="{{ .Site.Author.name }}">
+
+  {{- /* Favicon (optional) */ -}}
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}">
+
+  {{- /* Main Hugo generated CSS (if your theme uses one) */ -}}
+  {{ $mainCSS := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}" integrity="{{ $mainCSS.Data.Integrity }}">
+
+  {{- /* Custom CSS (yours, overrides everything else) */ -}}
+  {{ $customCSS := resources.Get "css/custom.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}">
+  </head>
