@@ -1,0 +1,7 @@
+{
+  "name": "fireguides",
+  "version": "1.0.0",
+  "devDependencies": {
+    "hugo-bin": "0.150.1"
+  }
+}
