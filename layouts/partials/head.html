@@ -6,11 +6,12 @@
   <title>{{ .Title }} | {{ .Site.Title }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
 
-  <!-- Theme CSS (keep this if you want default styles as fallback) -->
+  <!-- Default theme CSS -->
   <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
 
-  <!-- Custom CSS for dark theme + orange/red accents -->
-  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+  <!-- Custom CSS from assets -->
+  {{ $customCSS := resources.Get "css/custom.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $customCSS.Permalink }}">
 
   {{ partial "head_custom.html" . }}
 </head>
