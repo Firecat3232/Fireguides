@@ -2,10 +2,8 @@ baseURL = "https://fireguides.netlify.app/"
 title = "Fireguides"
    # keep whatever you’re using
 languageCode = "en-us"
-[params]
-  custom_css = ["css/custom.css"]
 [menu]
-
+theme = "mytheme"
   [[menu.main]]
   name = "Home"
   url = "/"
