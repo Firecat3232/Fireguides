@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+
+  <!-- Theme CSS (keep this if you want default styles as fallback) -->
+  <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
+
+  <!-- Custom CSS for dark theme + orange/red accents -->
+  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+
+  {{ partial "head_custom.html" . }}
+</head>
+<body>
