@@ -1,0 +1,75 @@
+:root {
+  --bg-base: #121212;
+  --bg-surface: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-muted: #888888;
+  --accent: #ff6f00;
+  --highlight: #e53935;
+  --border: #2a2a2a;
+}
+
+/* Dark background and base colors */
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+}
+
+/* Surfaces / cards / containers */
+.card, .content, .container {
+  background-color: var(--bg-surface);
+}
+
+/* Links, buttons, accents */
+a, a:visited {
+  color: var(--accent);
+}
+a:hover, a:focus {
+  color: var(--highlight);
+}
+
+/* Buttons */
+button, .btn {
+  background-color: var(--accent);
+  color: var(--bg-base);
+  border: none;
+}
+button:hover, .btn:hover {
+  background-color: var(--highlight);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+/* Muted / secondary text */
+.muted, .text-muted {
+  color: var(--text-muted);
+}
+
+/* Borders / dividers */
+hr, .divider {
+  border-color: var(--border);
+}
+
+/* Background for navigation header */
+nav {
+  background-color: var(--bg-surface);
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
+}
+
+/* Optional: invert buttons in dark surface */
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.btn-outline:hover {
+  background-color: var(--accent);
+  color: var(--bg-base);
+}
