@@ -1,75 +1,39 @@
-:root {
-  --bg-base: #121212;
-  --bg-surface: #1e1e1e;
-  --text-primary: #e0e0e0;
-  --text-muted: #888888;
-  --accent: #ff6f00;
-  --highlight: #e53935;
-  --border: #2a2a2a;
-}
-
-/* Dark background and base colors */
+/* Set background to black */
 body {
-  background-color: var(--bg-base);
-  color: var(--text-primary);
+  background-color: #000000;
+  color: #ffffff; /* Set text color to white for contrast */
 }
 
-/* Surfaces / cards / containers */
-.card, .content, .container {
-  background-color: var(--bg-surface);
+/* Style links for visibility */
+a {
+  color: #4fa3f7; /* Light blue */
 }
 
-/* Links, buttons, accents */
-a, a:visited {
-  color: var(--accent);
-}
-a:hover, a:focus {
-  color: var(--highlight);
+a:hover {
+  color: #ffcc00; /* Yellow on hover */
 }
 
-/* Buttons */
-button, .btn {
-  background-color: var(--accent);
-  color: var(--bg-base);
-  border: none;
-}
-button:hover, .btn:hover {
-  background-color: var(--highlight);
-}
-
-/* Headings */
+/* Adjust header styles */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-primary);
+  color: #ffffff; /* White headers */
 }
 
-/* Muted / secondary text */
-.muted, .text-muted {
-  color: var(--text-muted);
-}
-
-/* Borders / dividers */
-hr, .divider {
-  border-color: var(--border);
-}
-
-/* Background for navigation header */
+/* Style navigation bar */
 nav {
-  background-color: var(--bg-surface);
+  background-color: #333333; /* Dark gray background */
+  color: #ffffff; /* White text */
 }
 
-/* Footer */
+nav a {
+  color: #ffffff; /* White links */
+}
+
+nav a:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
+/* Style footer */
 footer {
-  background-color: var(--bg-surface);
-  color: var(--text-muted);
-}
-
-/* Optional: invert buttons in dark surface */
-.btn-outline {
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-.btn-outline:hover {
-  background-color: var(--accent);
-  color: var(--bg-base);
+  background-color: #222222; /* Darker gray */
+  color: #777777; /* Light gray text */
 }
